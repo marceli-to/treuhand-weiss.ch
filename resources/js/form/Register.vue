@@ -11,15 +11,6 @@
 
       <form v-if="isFetched">
         <form-grid>
-          <form-group class="col-span-6">
-            <select v-model="form.event" class="w-full border-0 px-10 lg:py-15 w-full font-medium bg-[center_left_.4rem] bg-[url('/img/chevron-down.svg')] bg-[length:20px_10px] pl-35 ring-0 focus:ring-0 outline-none">
-              <option v-for="event in events" :key="event.id" :value="event.title">
-                {{ event.title }}
-              </option>
-            </select>
-          </form-group>
-        </form-grid>
-        <form-grid>
           <form-group :error="errors.firstname" class="mb-15 md:mb-0">
             <form-input 
               type="text" 
