@@ -1,0 +1,14 @@
+<a href="javascript:;" title="Menu anzeigen" class="text-ocean block md:hidden" data-btn-menu-show>
+  {{ partial:icons/burger }}
+</a>
+<nav class="site-menu bg-silver-mist fixed right-0 top-0 pb-60 min-h-fit min-w-[60%] md:relative md:-bottom-3 md:pb-0 md:min-w-auto md:top-auto md:right-auto md:bg-transparent" data-menu>
+  <a href="javascript:;" title="Menu verbergen" class="text-medium block fixed right-22 top-25 md:hidden" data-btn-menu-hide>
+    {{ partial:icons/cross }}
+  </a>
+  <ul class="mt-80 md:mt-0 mb-0 md:flex md:justify-end md:items-end leading-none">
+    {{ partial:menu/item :url="'#dienstleistungen'" :text="'Dienstleistungen'" }}
+    {{ partial:menu/item :url="'#partner'" :text="'Partner'" }}
+    {{ partial:menu/item :url="'#ueber-mich'" :text="'Über mich'" }}
+    {{ partial:menu/item :url="'#kontakt'" :text="'Kontakt'" }}
+  </ul>
+</nav>

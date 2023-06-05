@@ -1,0 +1,15 @@
+h1, h2, h3 {
+  @apply uppercase font-medium;
+}
+
+h1 {
+  @apply leading-9 text-xl text-ocean mb-25 max-w-[300px] md:max-w-none;
+}
+
+h2 {
+  @apply text-base xl:text-md leading-tight mb-5 text-base text-ocean;
+}
+
+h3 {
+  @apply text-md leading-snug mb-5
+}

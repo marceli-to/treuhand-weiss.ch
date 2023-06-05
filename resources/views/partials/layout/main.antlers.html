@@ -1,0 +1,11 @@
+<main class="flex-1 pt-70 lg:pt-105">
+  {{ if is_homepage }}
+    {{ partial:views/intro }}
+    {{ partial:views/offer }}
+    {{ partial:views/partner }}
+    {{ partial:views/about }}
+    {{ partial:views/contact }}
+  {{ else }}
+    {{ partial:views/content }}
+  {{ endif }}
+</main>
