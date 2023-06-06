@@ -9,10 +9,9 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-}
 
 nav.site-menu {
   @apply opacity-0 -z-10 pointer-events-none transition-opacity md:opacity-100 md:z-50 md:pointer-events-auto;
@@ -87,4 +86,14 @@ a[class="scroll-mt-80 md:scroll-mt-125"] {
 
 .content-privacy h3 {
   @apply mb-10
+}
+
+/* Mapbox */
+.marker {
+  background-image: url('/resources/images/marker.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 25px;
+  width: 40px;
 }
