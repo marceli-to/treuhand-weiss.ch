@@ -2,7 +2,7 @@
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterStoreRequest extends FormRequest
+class ContactFormStoreRequest extends FormRequest
 {
   /**
    * Determine if the user is authorized to make this request.
@@ -28,7 +28,6 @@ class RegisterStoreRequest extends FormRequest
       'firstname' => 'required',
       'address' => 'required',
       'zip_city' => 'required',
-      'phone' => 'required',
       'email' => 'required|email',
     ];
   }
@@ -46,7 +45,6 @@ class RegisterStoreRequest extends FormRequest
       'firstname.required' => 'Vorname wird benötigt!',
       'address.required' => 'Adresse wird benötigt!',
       'zip_city.required' => 'PLZ/Ort wird benötigt!',
-      'phone.required' => 'Telefon wird benötigt!',
       'email.required' => 'E-Mail wird benötigt!',
       'email.email' => 'E-Mail ist ungültig!',
     ];

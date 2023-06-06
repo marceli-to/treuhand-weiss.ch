@@ -1,7 +1,6 @@
 <x-mail::message>
 <div class="text-base font-medium pb-large">
-  Neue Anmeldung für
-  <div class="font-regular">{{ $data->event }}</div>
+  Neue Nachricht
 </div>
 <div class="text-base pb-base">
   <strong>Vorname</strong><br>
@@ -16,7 +15,7 @@
   {{ $data->email }}
 </div>
 <div class="text-base pb-base">
-  <strong>Telefon</strong><br>
-  {{ $data->phone }}
+  <strong>Nachricht</strong><br>
+  {!! $data->message !!}
 </div>
 </x-mail::message>

@@ -1,6 +1,6 @@
 @props(['url'])
 <tr>
   <td class="header">
-    <img src="{{ config('app.url') }}/img/logo-drive-academy.png" title="Martin Weiss Treuhand" alt="Martin Weiss Treuhand" height="50" width="250" style="display:block; height:auto; width: 200px;">
+    <img src="{{ config('app.url') }}/img/logo.png" title="Martin Weiss Treuhand" alt="Martin Weiss Treuhand" height="51" width="300" style="display:block; height:auto; width: 300px;">
   </td>
 </tr>

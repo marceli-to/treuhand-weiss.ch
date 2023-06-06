@@ -17,5 +17,5 @@ use App\Http\Controllers\Api\FormController;
 */
 
 Route::get('/events', [EventController::class, 'get']);
-Route::post('/form/register', [FormController::class, 'store']);
+Route::post('/form/contact', [FormController::class, 'store']);
 

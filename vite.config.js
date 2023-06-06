@@ -14,7 +14,7 @@ export default defineConfig({
     vue(),
     laravel([
       'resources/js/app.js',
-      'resources/js/form/register.js',
+      'resources/js/form/contact.js',
     ]),
   ],
 });

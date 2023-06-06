@@ -9,7 +9,7 @@
         v-if="validationErrors.length > 0">
       </validation-errors>
 
-      <form v-if="isFetched">
+      <form>
         <form-grid>
           <form-group :error="errors.firstname" class="mb-15 md:mb-0">
             <form-input 
@@ -37,7 +37,7 @@
             <form-input 
               type="text" 
               v-model="form.address" 
-              placeholder="Adresse*"
+              placeholder="Strasse, Nr*"
               :error="errors.address"
               @blur="validateField('address')"
               @focus="removeError('address')">
@@ -55,16 +55,6 @@
           </form-group>
         </form-grid>
         <form-grid>
-          <form-group :error="errors.phone" class="mb-15 md:mb-0">
-            <form-input 
-              type="text" 
-              v-model="form.phone" 
-              placeholder="Telefon*"
-              :error="errors.phone"
-              @blur="validateField('phone')"
-              @focus="removeError('phone')">
-            </form-input>
-          </form-group>
           <form-group :error="errors.email">
             <form-input 
               type="email" 
@@ -75,9 +65,16 @@
               @focus="removeError('email')">
             </form-input>
           </form-group>
+          <form-group class="mb-15 md:mb-0">
+            <form-input 
+              type="text" 
+              v-model="form.phone" 
+              placeholder="Telefon">
+            </form-input>
+          </form-group>
         </form-grid>
         <form-grid>
-          <form-group class="col-span-12">
+          <form-group :class="'!col-span-12'">
             <form-textarea 
               v-model="form.message" 
               placeholder="Mitteilung"
@@ -92,7 +89,7 @@
             :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-medium text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
             type="button"
             @click.prevent="submit()">
-            Absenden
+            Senden
           </button>
         </form-group>
       </form>
@@ -127,7 +124,6 @@ export default {
     return {
 
       form: {
-        event: null,
         firstname: null,
         name: null,
         address: null,
@@ -144,7 +140,6 @@ export default {
         name: null,
         address: null,
         zip_city: null,
-        phone: null,
         email: null,
         message: null,
       },
@@ -152,7 +147,7 @@ export default {
       validationErrors: [],
 
       routes: {
-        store: '/api/form/register'
+        store: '/api/form/contact'
       },
 
       isSent: false,
@@ -161,19 +156,7 @@ export default {
     }
   },
 
-  mounted() {
-    this.getEvents();
-  },
-
   methods: {
-
-    getEvents() {
-      this.axios.get('/api/events').then(response => {
-        this.events = response.data;
-        this.form.event = this.events[0].title;
-        this.isFetched = true;
-      });
-    },
 
     submit() {
       this.isSent = false;
@@ -257,7 +240,6 @@ export default {
         this.form.name &&
         this.form.address &&
         this.form.zip_city &&
-        this.form.phone &&
         this.validEmail()
       )
       {

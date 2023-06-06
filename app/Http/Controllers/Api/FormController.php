@@ -3,23 +3,23 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Statamic\Facades\Entry;
 use Statamic\Fields\Value;
-use App\Http\Requests\RegisterStoreRequest;
+use App\Http\Requests\ContactFormStoreRequest;
 use Illuminate\Support\Facades\Notification;
-use App\Notifications\RegisterOwnerEmail;
+use App\Notifications\ContactFormOwnerEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class FormController extends Controller
 {
   /**
-   * @param RegisterStoreRequest $request 
+   * @param ContactFormStoreRequest $request 
    * @return \Illuminate\Http\Response
    */
-  public function store(RegisterStoreRequest $request)
+  public function store(ContactFormStoreRequest $request)
   { 
-    $title = $request->input('event') . ' – ' . $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('email');
-    $registration = Entry::make()
-    ->collection('registration')
+    $title = $request->input('firstname') . ' ' . $request->input('name') . ', ' . $request->input('email');
+    $contactFromData = Entry::make()
+    ->collection('contactform')
     ->slug($title)
     ->data(
       array_merge(
@@ -30,9 +30,8 @@ class FormController extends Controller
       )
     );
     
-    $registration->save();
-    Notification::route('mail', env('MAIL_TO'))->notify(new RegisterOwnerEmail($registration));
-    return response()->json($registration->id, 201);
+    $contactFromData->save();
+    Notification::route('mail', env('MAIL_TO'))->notify(new ContactFormOwnerEmail($contactFromData));
+    return response()->json($contactFromData->id, 201);
   }
-
 }

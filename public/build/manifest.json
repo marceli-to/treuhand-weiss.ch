@@ -4,7 +4,7 @@
     "src": "resources/images/marker.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-cdd30618.css",
+    "file": "assets/app-8805a613.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -12,22 +12,22 @@
       "assets/marker-daa6ef12.svg"
     ],
     "css": [
-      "assets/app-cdd30618.css"
+      "assets/app-8805a613.css"
     ],
-    "file": "assets/app-5cbe8ca4.js",
+    "file": "assets/app-4c50dd1d.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/js/form/register.css": {
-    "file": "assets/register-aabba6b1.css",
-    "src": "resources/js/form/register.css"
+  "resources/js/form/contact.css": {
+    "file": "assets/contact-aabba6b1.css",
+    "src": "resources/js/form/contact.css"
   },
-  "resources/js/form/register.js": {
+  "resources/js/form/contact.js": {
     "css": [
-      "assets/register-aabba6b1.css"
+      "assets/contact-aabba6b1.css"
     ],
-    "file": "assets/register-6929b4b1.js",
+    "file": "assets/contact-a8695468.js",
     "isEntry": true,
-    "src": "resources/js/form/register.js"
+    "src": "resources/js/form/contact.js"
   }
 }

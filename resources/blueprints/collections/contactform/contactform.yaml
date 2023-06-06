@@ -1,4 +1,3 @@
-title: FormData
 tabs:
   main:
     display: Main
@@ -17,12 +16,13 @@ tabs:
             field:
               input_type: text
               antlers: false
-              display: Firstname
               type: text
+              display: Firstname
               icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
               validate:
                 - required
           -
@@ -30,25 +30,27 @@ tabs:
             field:
               input_type: text
               antlers: false
-              display: Name
               type: text
+              display: Name
               icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
               validate:
                 - required
           -
-            handle: address
+            handle: street_number
             field:
               input_type: text
               antlers: false
-              display: Address
               type: text
+              display: 'Street, Number'
               icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
               validate:
                 - required
           -
@@ -56,12 +58,13 @@ tabs:
             field:
               input_type: text
               antlers: false
-              display: 'ZIP, City'
               type: text
+              display: 'Zip, City'
               icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
               validate:
                 - required
           -
@@ -69,8 +72,8 @@ tabs:
             field:
               input_type: text
               antlers: false
-              display: Phone
               type: text
+              display: Phone
               icon: text
               listable: hidden
               instructions_position: above
@@ -81,12 +84,13 @@ tabs:
             field:
               input_type: email
               antlers: false
-              display: E-Mail
               type: text
+              display: E-Mail
               icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
               validate:
                 - required
                 - email
@@ -94,12 +98,13 @@ tabs:
             handle: message
             field:
               antlers: false
-              display: Message
               type: textarea
+              display: Message
               icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -110,3 +115,4 @@ tabs:
             field:
               type: slug
               localizable: true
+title: ContactForm

@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class RegisterOwnerEmail extends Notification
+class ContactFormOwnerEmail extends Notification
 {
   use Queueable;
 
@@ -40,8 +40,8 @@ class RegisterOwnerEmail extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@treuhand-weiss.ch')
-      ->subject('Neue Anmeldung treuhand-weiss.ch')
-      ->markdown('mail.registration.owner', ['data' => $this->data]);
+      ->subject('Neue Nachricht treuhand-weiss.ch')
+      ->markdown('mail.contact-form.owner', ['data' => $this->data]);
   }
 
   /**
