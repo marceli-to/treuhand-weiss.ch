@@ -86,7 +86,7 @@
         </form-grid>
         <form-group>
           <button 
-            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'bg-ocean font-medium text-white uppercase py-15 px-20 leading-none inline-flex items-center w-auto text-left']"
+            :class="[isValid && !isLoading ? 'bg-ocean text-white hover:bg-black transition-colors' : 'opacity-50 pointer-events-none select-none', 'flex items-center mr-10 xl:mr-15 bg-ocean px-15 md:px-25 xl:px-45 py-15 uppercase font-medium text-center text-white !leading-none hover:bg-black h-auto']"
             type="button"
             @click.prevent="submit()">
             Senden
