@@ -4,7 +4,7 @@
 <tr>
 <td class="content-cell" align="left">
 <div class="text-base pb-base">
-<strong>Martin Weiss Treuhand</strong><br>
+<strong>Martin Weiss Treuhand AG</strong><br>
 Zihlstrasse 46b<br>
 8340 Hinwil
 </div>

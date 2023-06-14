@@ -3,7 +3,7 @@ id: a334ecc3-6190-455d-b460-8cc8a1444bb7
 blueprint: page
 title: Impressum
 updated_by: 57ce677f-65c0-4ee0-bc33-c4255edf305b
-updated_at: 1685102179
+updated_at: 1686737244
 content:
   -
     type: heading
@@ -21,59 +21,34 @@ content:
         marks:
           -
             type: bold
-        text: 'Martin Weiss Treuhand'
+        text: 'Martin Weiss Treuhand AG'
       -
         type: hardBreak
         marks:
           -
             type: bold
       -
+        type: text
+        text: 'Im Chrummenacher 2'
+      -
         type: hardBreak
+      -
+        type: text
+        text: '8308 Illnau'
+  -
+    type: paragraph
+    content:
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'https://goo.gl/maps/VUXbaztxDHnaAutv8'
+              href: 'tel:079 712 28 18'
               rel: null
               target: _blank
               title: null
-        text: 'Zihlstrasse 46b'
-      -
-        type: hardBreak
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://goo.gl/maps/VUXbaztxDHnaAutv8'
-              rel: null
-              target: _blank
-              title: null
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://goo.gl/maps/VUXbaztxDHnaAutv8'
-              rel: null
-              target: _blank
-              title: null
-        text: '8340 Hinwil'
-      -
-        type: hardBreak
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'tel:0794118794'
-              rel: null
-              target: null
-              title: Telefon
-        text: '079 411 87 94'
+        text: '079 712 28 18'
       -
         type: hardBreak
       -
