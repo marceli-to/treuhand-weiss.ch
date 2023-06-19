@@ -5,8 +5,7 @@
 <td class="content-cell" align="left">
 <div class="text-base pb-base">
 <strong>Martin Weiss Treuhand AG</strong><br>
-Zihlstrasse 46b<br>
-8340 Hinwil
+Im Chrummenacher 2<br>8308 Illnau
 </div>
 </td>
 </tr>
