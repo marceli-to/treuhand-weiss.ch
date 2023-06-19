@@ -31,7 +31,7 @@ class FormController extends Controller
     );
     
     $contactFromData->save();
-    // Notification::route('mail', env('MAIL_TO'))->notify(new ContactFormOwnerEmail($contactFromData));
+    Notification::route('mail', env('MAIL_TO'))->notify(new ContactFormOwnerEmail($contactFromData));
     return response()->json($contactFromData->id, 201);
   }
 }
