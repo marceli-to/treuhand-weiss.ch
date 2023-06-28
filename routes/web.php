@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('/form/contact', [FormController::class, 'store'])->name('form.contact.store');
 
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'

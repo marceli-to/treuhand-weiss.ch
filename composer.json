@@ -15,6 +15,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "oneduo/laravel-recaptcha-enterprise": "^0.2.0",
         "statamic/cms": "^4.0"
     },
     "require-dev": {

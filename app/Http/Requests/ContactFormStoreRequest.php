@@ -29,6 +29,7 @@ class ContactFormStoreRequest extends FormRequest
       'address' => 'required',
       'zip_city' => 'required',
       'email' => 'required|email',
+      'g-recaptcha-response' => ['required', new ReCaptcha]
     ];
   }
 
@@ -47,6 +48,7 @@ class ContactFormStoreRequest extends FormRequest
       'zip_city.required' => 'PLZ/Ort wird benötigt!',
       'email.required' => 'E-Mail wird benötigt!',
       'email.email' => 'E-Mail ist ungültig!',
+      'g-recaptcha-response.required' => 'Captcha wird benötigt!'
     ];
   }
 }
