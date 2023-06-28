@@ -4,7 +4,7 @@
     "src": "resources/images/marker.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-aaf97f0b.css",
+    "file": "assets/app-b45a354a.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -12,22 +12,10 @@
       "assets/marker-daa6ef12.svg"
     ],
     "css": [
-      "assets/app-aaf97f0b.css"
+      "assets/app-b45a354a.css"
     ],
-    "file": "assets/app-c8e24a7a.js",
+    "file": "assets/app-57e01f55.js",
     "isEntry": true,
     "src": "resources/js/app.js"
-  },
-  "resources/js/form/contact.css": {
-    "file": "assets/contact-aabba6b1.css",
-    "src": "resources/js/form/contact.css"
-  },
-  "resources/js/form/contact.js": {
-    "css": [
-      "assets/contact-aabba6b1.css"
-    ],
-    "file": "assets/contact-86711246.js",
-    "isEntry": true,
-    "src": "resources/js/form/contact.js"
   }
 }

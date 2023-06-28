@@ -2,8 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\EventController;
-use App\Http\Controllers\Api\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +13,3 @@ use App\Http\Controllers\Api\FormController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get('/events', [EventController::class, 'get']);
-Route::post('/form/contact', [FormController::class, 'store']);
-

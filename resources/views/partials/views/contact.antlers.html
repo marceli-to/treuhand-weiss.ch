@@ -19,8 +19,64 @@
       </div>
     </div>
     <div class="mt-30 xl:mt-40">
-      <div id="form-contact"></div>
+      {{# <div id="form-contact"></div> #}}
+
+      {{ form:contact error_redirect="#error" redirect="#success" }}
+
+        {{ if success }}
+          <div class="text-green-500" data-form-success>
+            <p>Herzlichen Dank. Ihre Daten wurden erfolgreich übermittelt.</p>
+          </div>
+        {{ else }}
+          {{ if errors }}
+            <div class="text-red-500" data-form-error>
+              <ul>
+                {{ errors }}
+                  <li>{{ value }}</li>
+                {{ /errors }}
+              </ul>
+            </div>
+          {{ /if }}
+
+          <div class="md:grid md:grid-cols-12 gap-15 mb-15">
+            <div class="col-span-6 relative mb-15 md:mb-0">
+              <input type="text" placeholder="Vorname*" name="firstname" value="{{ old:firstname }}" required class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+            <div class="col-span-6 relative">
+              <input type="text" placeholder="Name*" name="name" value="{{ old:name }}" required class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-12 gap-15 mb-15">
+            <div class="col-span-6 relative mb-15 md:mb-0">
+              <input type="text" placeholder="Strasse, Nr*" name="street" value="{{ old:street }}" required class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+            <div class="col-span-6 relative">
+              <input type="text" placeholder="PLZ/Ort*" name="location" value="{{ old:location }}" required class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-12 gap-15 mb-15">
+            <div class="col-span-6 relative">
+              <input type="email" placeholder="E-Mail*" name="email" value="{{ old:email }}" required class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+            <div class="col-span-6 relative mb-15 md:mb-0">
+              <input type="text" placeholder="Telefon" name="phone" value="{{ old:phone }}" class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:leading-none placeholder:text-black">
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-12 gap-15 mb-15">
+            <div class="col-span-6 relative !col-span-12">
+              <textarea type="text" placeholder="Mitteilung" name="message" value="{{ old:message }}" class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:text-black min-h-[150px] md:min-h-[240px]"></textarea>
+            </div>
+            <div class="col-span-6 relative !col-span-12">
+              {{ recaptcha:checkbox }}
+            </div>
+            <div class="col-span-6 relative">
+              <button class="flex items-center mr-10 xl:mr-15 bg-ocean px-15 md:px-25 xl:px-45 py-15 uppercase font-medium text-center text-white !leading-none hover:bg-black h-auto" type="submit"> Senden </button>
+            </div>
+          </div>
+        {{ /if }}
+      {{ /form:contact }}
     </div>
  </article>
 </section>
-{{ vite src="resources/js/form/contact.js" }}
+{{ recaptcha }}
+{{# {{ vite src="resources/js/form/contact.js" }} #}}
