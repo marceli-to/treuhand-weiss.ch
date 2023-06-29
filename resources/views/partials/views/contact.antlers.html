@@ -24,11 +24,13 @@
       {{ form:contact error_redirect="#error" redirect="#success" }}
 
         {{ if success }}
+          <a name="success"></a>
           <div class="text-green-500" data-form-success>
             <p>Herzlichen Dank. Ihre Daten wurden erfolgreich übermittelt.</p>
           </div>
         {{ else }}
           {{ if errors }}
+            <a name="error" class="scroll-mt-80 md:scroll-mt-125"></a>
             <div class="text-red-500" data-form-error>
               <ul>
                 {{ errors }}
