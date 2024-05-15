@@ -5,7 +5,7 @@
 <td class="content-cell" align="left">
 <div class="text-base pb-base">
 <strong>Martin Weiss Treuhand AG</strong><br>
-Im Chrummenacher 2<br>8308 Illnau
+Am Landsberg 39<br>8330 Pfäffikon ZH
 </div>
 </td>
 </tr>

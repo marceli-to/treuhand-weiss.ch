@@ -14,7 +14,7 @@ body {
 
 
 nav.site-menu {
-  @apply opacity-0 -z-10 pointer-events-none transition-opacity md:opacity-100 md:z-50 md:pointer-events-auto;
+  @apply opacity-0 -z-10 pointer-events-none transition-opacity lg:opacity-100 lg:z-50 lg:pointer-events-auto;
 }
 
 nav.site-menu.is-visible {
@@ -22,7 +22,7 @@ nav.site-menu.is-visible {
 }
 
 .site-container {
-  @apply max-w-[1200px] px-20 md:px-70 mx-auto;
+  @apply max-w-[1340px] px-20 md:px-50 mx-auto;
 }
 
 strong {

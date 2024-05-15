@@ -8,14 +8,24 @@ function loadMapboxScript() {
 
 function init() {
   initializeMap({
-    lat: 47.40376532684344,
-    lng: 8.718921271966424,
-    container: 'map-illnau',
+    lat: 47.37405208471287,
+    lng: 8.783222939825347,
+    container: 'map-pfaeffikon',
   });
   initializeMap({
     lat: 47.15661299903208,
     lng: 8.512031691063648,
     container: 'map-zug',
+  });
+  initializeMap({
+    lat: 46.59826143456267,
+    lng: 9.956350727195257,
+    container: 'map-zuoz',
+  });
+  initializeMap({
+    lat: 46.45579917873923, 
+    lng: 6.870650455132087,
+    container: 'map-tour-de-peilz',
   });
 }
 
