@@ -8,28 +8,11 @@
     </p>
     <div class="mt-30 xl:mt-40 md:grid md:grid-cols-2 md:gap-20">
       <div class="md:col-span-1">
-        <h2 class="!mb-0 capitalize">Standort Pfäffikon ZH</h2>
         <a href="https://maps.app.goo.gl/jKhLQJkagpephJFu8" target="_blank" title="Auf Karte anzeigen" class="hover:underline underline-offset-2">Am Landsberg 39<br>8330 Pfäffikon ZH</a>
         <div class="mt-15 min-h-[240px] md:min-h-[400px]" id="map-pfaeffikon"></div>
       </div>
-      <div class="mt-30 md:mt-0 md:col-span-1">
-        <h2 class="!mb-0 capitalize">Standort Zug</h2>
-        <a href="https://goo.gl/maps/eb2Fo2F8Md9DdYsL7" target="_blank" title="Auf Karte anzeigen" class="hover:underline underline-offset-2">Untere Roostmatt 1<br>6300 Zug</a>
-        <div class="mt-15 min-h-[240px] md:min-h-[400px]" id="map-zug"></div>
-      </div>
-      <div class="mt-30 md:mt-20 md:col-span-1">
-        <h2 class="!mb-0 capitalize">Standort Zuoz</h2>
-        <a href="https://maps.app.goo.gl/aF4kFGhsg11PCtJU6" target="_blank" title="Auf Karte anzeigen" class="hover:underline underline-offset-2">Chesa Vaivetta, Stradun 14<br>7524 Zuoz</a>
-        <div class="mt-15 min-h-[240px] md:min-h-[400px]" id="map-zuoz"></div>
-      </div>
-      <div class="mt-30 md:mt-20 md:col-span-1">
-        <h2 class="!mb-0 capitalize">Standort La Tour-de-Peilz</h2>
-        <a href="https://maps.app.goo.gl/zDF8F4ZavJHNDpNa7" target="_blank" title="Auf Karte anzeigen" class="hover:underline underline-offset-2">Chemin des Vignes 15A<br>1814 La Tour-de-Peilz</a>
-        <div class="mt-15 min-h-[240px] md:min-h-[400px]" id="map-tour-de-peilz"></div>
-      </div>
     </div>
     <div class="mt-30 xl:mt-40">
-      {{# <div id="form-contact"></div> #}}
 
       {{ form:contact error_redirect="#error" redirect="#success" }}
 
@@ -75,10 +58,10 @@
             </div>
           </div>
           <div class="md:grid md:grid-cols-12 gap-15 mb-15">
-            <div class="col-span-6 relative !col-span-12">
+            <div class="relative !col-span-12">
               <textarea type="text" placeholder="Mitteilung" name="remarks" class="bg-white border-0 ring-0 focus:ring-0 px-10 lg:py-15 w-full text-base placeholder:text-base placeholder:text-black min-h-[150px] md:min-h-[240px]">{{ old:remarks }}</textarea>
             </div>
-            <div class="col-span-6 relative !col-span-12">
+            <div class="relative !col-span-12">
               {{ recaptcha:checkbox }}
             </div>
             <div class="col-span-6 relative">

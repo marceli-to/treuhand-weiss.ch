@@ -4,7 +4,7 @@
     "src": "resources/images/marker.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-0b91fc40.css",
+    "file": "assets/app-7084ee49.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -12,9 +12,9 @@
       "assets/marker-daa6ef12.svg"
     ],
     "css": [
-      "assets/app-0b91fc40.css"
+      "assets/app-7084ee49.css"
     ],
-    "file": "assets/app-65971860.js",
+    "file": "assets/app-a36d3720.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
