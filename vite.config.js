@@ -10,6 +10,18 @@ export default defineConfig({
       '@' : path.resolve(__dirname, './resources/js/')
     },
   },
+  server: {
+    https: true,
+    hmr: {
+      host: 'treuhand-weiss.ch.test',
+      protocol: 'https'
+    },
+    cors: {
+      origin: ['https://treuhand-weiss.ch.test'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      credentials: true
+    },
+  },
   plugins: [
     vue(),
     laravel([
