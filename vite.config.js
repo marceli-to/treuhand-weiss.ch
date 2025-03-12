@@ -11,6 +11,7 @@ export default defineConfig({
     },
   },
   server: {
+    host: '0.0.0.0',
     https: true,
     hmr: {
       host: 'treuhand-weiss.ch.test',
@@ -21,6 +22,7 @@ export default defineConfig({
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       credentials: true
     },
+    expose: true,
   },
   plugins: [
     vue(),
