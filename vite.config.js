@@ -2,7 +2,10 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
+import fs from 'fs';
 const path = require('path');
+
+const host = 'treuhand-weiss.ch.test';
 
 export default defineConfig({
   resolve:{
@@ -11,24 +14,20 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
-    https: true,
-    hmr: {
-      host: 'treuhand-weiss.ch.test',
-      protocol: 'https'
-    },
     cors: {
-      origin: ['https://treuhand-weiss.ch.test'],
+      origin: [`https://${host}`],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       credentials: true
     },
-    expose: true,
   },
   plugins: [
     vue(),
-    laravel([
-      'resources/js/app.js',
-      //'resources/js/form/contact.js',
-    ]),
+    laravel({
+      input: [
+        'resources/js/app.js',
+        //'resources/js/form/contact.js',
+      ],
+      refresh: true,
+    }),
   ],
 });
